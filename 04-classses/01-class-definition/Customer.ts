@@ -1,19 +1,33 @@
-class Customer {
+class Customer2 {
 
-    firstName: string;
-    lastName: string;
+    private _firstName: string;
+    private _lastName: string;
+    public get lastName(): string {
+        return this._lastName;
+    }
+    public set lastName(value: string) {
+        this._lastName = value;
+    }
     constructor(theFirst: string, theLast: string){
-        this.firstName = theFirst;
-        this.lastName = theLast;
+        this._firstName = theFirst;
+        this._lastName = theLast;
+    }
+
+    public get firstName(): string{
+        return this._firstName;
+    }
+
+    public set firtstName(value : string){
+        this._firstName = value;
     }
  
 }
 
-let myCustomer = new Customer("Ahmed","AAJLI");
+let myCustomer2 = new Customer2("Ahmed","AAJLI");
 
 //myCustomer.firstName = "Ahmed";
 //myCustomer.lastName = "AAJLI";
 
-console.log(myCustomer.firstName);
-console.log(myCustomer.lastName);
+console.log(myCustomer2.firstName);
+console.log(myCustomer2.lastName);
 
